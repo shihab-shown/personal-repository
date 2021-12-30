@@ -12,7 +12,7 @@ int main()
             printf("  ");
         }
 
-        for (col = 1; col <= 2 * row - 1; col++)
+        for (col = 1; col <= 2*row-1; col++)
 
         {
             printf("%d ", col);
@@ -20,6 +20,20 @@ int main()
 
         printf("\n");
     }
+    for (row = n - 1; row >= 1; row--)
+    {
+        for (col = 1; col <= n - row; col++)
+        {
+            printf("  ");
+        }
 
+        for (col = 1; col <= 2*row-1; col++)
+
+        {
+            printf("%d ", col);
+        }
+
+        printf("\n");
+    }
     return 0;
 }
