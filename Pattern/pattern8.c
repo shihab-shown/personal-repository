@@ -1,3 +1,11 @@
+/*
+Input N= 5
+*
+* *
+*   *
+*     *
+* * * * *
+*/
 #include <stdio.h>
 
 int main()
@@ -7,17 +15,17 @@ int main()
     scanf("%d", &n);
     for (row = 1; row <= n; row++)
     {
-        for (col = 1; col <= n - row; col++)
+        for (col = 1; col <= row; col++)
+        if(col==1 || row==n || col==row)
         {
-            printf("  ");
+          printf("* ");
         }
-
-        for (col = 1; col <= 2 * row - 1; col++)
-
+        else
         {
-            printf("%d ", col);
+          printf("  ");
         }
-
+        
+            
         printf("\n");
     }
 

@@ -1,3 +1,11 @@
+/*
+Enter N= 5
+A A A A A
+A       A
+A       A
+A       A
+A A A A A
+*/
 #include <stdio.h>
 
 int main()
@@ -10,7 +18,7 @@ int main()
     {
         for (col = 1; col <= n; col++)
         {
-            if (row == 1 || row == n || col == 1 ||  col == n || row==n/2 || col==n/2)
+            if (row == 1 || row == n || col == 1 ||  col == n)
             {
                 printf("A ");
             }
