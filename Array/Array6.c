@@ -1,4 +1,5 @@
 //Transpose Matrix using ARRAY
+
 #include <stdio.h>
 
 int main()
@@ -17,8 +18,8 @@ int main()
         }
     }
       
-      printf("\n\nTranspose of the Matrix is= \n");
-      
+      printf("\n\nThe Matrix is= \n");
+
      for(i=0;i<rownum;i++)
     {
       for(j=0;j<colnum;j++)
