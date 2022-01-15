@@ -1,3 +1,5 @@
 *.exe
 *.save
 *.o
+Rough.c
+.vscode/settings.json
