@@ -1,5 +1,9 @@
-
-
+/* Online problem
+Read the employee's salary, calculate and print the 
+new employee's salary, as well the money earned and 
+the increase percentual obtained by the employee, 
+with corresponding messages in Portuguese, as the below example.
+*/
 #include <stdio.h>
 
 int main()
