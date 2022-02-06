@@ -5,7 +5,7 @@
 
 int main()
 {
-  int PA,PB,year=0,i;
+  int PA,PB,year=0;
   double GA,GB,increaseA,increaseB;
   printf("Enter the population of A city: ");
   scanf("%d",&PA);
