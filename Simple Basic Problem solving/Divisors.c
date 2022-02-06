@@ -14,7 +14,7 @@ int main()
   }
   else
   {
-      for(b=1;b<=a;b++)
+    for(b=1;b<=a;b++)
     {
       if(a%b==0)
       {
