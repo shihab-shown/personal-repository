@@ -9,23 +9,17 @@ int main()
   int a,b,c=1,temp;
   printf("Enter the range: ");
   scanf("%d",&a);
-  int N[a],X[a];
+  int N[a];
   for(int i=0;i<a;i++)
     {
       printf("Enter N[%d]= ",i+1);
       scanf("%d",&N[i]);
     }
-  b=a;
-  for(int i=0;i<a;i++)
-    {
-      b--;
-      X[b]=N[i];  
-    }
    printf("\n\n");
 
-  for(int i=0;i<a;i++)
+  for(int i=(a-1);i>=0;i--)
     {
-      printf("N[%d]= %d\n",i+1,X[i]);
+      printf("N[%d]= %d\n",i+1,N[i]);
     }
 return 0;
 }
