@@ -2,12 +2,12 @@
 
 int main()
 {
-    int a, b;
+    int num, i;
     printf("Enter a number\n");
-    scanf("%d", &a);
-    for (b = 1; b <= 10; b++)
+    scanf("%d", &num);
+    for (i = 1; i <= 10; i++)
     {
-        printf("%dx%d=%d\n", a, b, a * b);
+        printf("%d x %d = %d\n", num, i, num * i);
     }
 
     return 0;
