@@ -1,11 +1,10 @@
-/*
-Enter the value of N= 5
-    1
-   121
-  12321
- 1234321
-123454321
-*/
+// Enter the value of N= 5
+//     1
+//    121
+//   12321
+//  1234321
+// 123454321
+
 #include <stdio.h>
 
   int main()

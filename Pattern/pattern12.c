@@ -1,43 +1,14 @@
-// #include <stdio.h>
+// Input-> 5
+// 5 5 5 5 5 5 5 5 5
+// 5 4 4 4 4 4 4 4 5
+// 5 4 3 3 3 3 3 4 5
+// 5 4 3 2 2 2 3 4 5
+// 5 4 3 2 1 2 3 4 5
+// 5 4 3 2 2 2 3 4 5
+// 5 4 3 3 3 3 3 4 5
+// 5 4 4 4 4 4 4 4 5
+// 5 5 5 5 5 5 5 5 5
 
-// int main()
-// {
-
-//   int n, m;
-//   printf("Enter N= ");
-//   scanf("%d", &n);
-//   m = (2 * n) - 1;
-//   while (n != 0)
-//   {
-//     pat(n, m);
-//     n--;
-//   }
-
-//   printf("\n");
-
-//   return 0;
-// }
-// int pat(int n, int m)
-// {
-//   int row, col;
-//   for (row = 1; row <= m; row++)
-//   {
-//     for (col = 1; col <= m; col++)
-//     {
-//       if (row == 1 || row == m || col == 1 || col == m)
-//       {
-//         printf("%d ", n);
-//       }
-//       else
-//       {
-//         n--;
-//         m = (2 * n) - 1;
-//         pat(n,m);
-//       }
-//     }
-//     return 0;
-//   }
-// }
 #include<stdio.h>
 int main()
 {
