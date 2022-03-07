@@ -9,6 +9,6 @@
     s=(a+b+c)/2;
     Value=s*(s-a)*(s-b)*(s-c);
     Area=sqrt(Value);
-    printf("The number is %f",Area);
+    printf("The area is %f",Area);
     return 0;
 }
