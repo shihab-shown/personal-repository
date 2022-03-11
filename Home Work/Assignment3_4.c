@@ -3,9 +3,7 @@ int main()
 {
   int a,b,c,tmp1,tmp2;
   printf("Enter the values of three intergers: ");
-  scanf("%d",&a);
-  scanf("%d",&b);
-  scanf("%d",&c);
+  scanf("%d %d %d",&a,&b,&c);
   tmp1=a;
   tmp2=b;
   b=tmp1;

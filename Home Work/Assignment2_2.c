@@ -11,7 +11,11 @@
     {
       factorial*=i;
     }
-    printf("%d\n",factorial);
+    printf("The factorial of %d is %d",n,factorial);
   }
+  else
+  {
+    printf("The factorial of %d is 1",n);
+  } 
   return 0;
 }

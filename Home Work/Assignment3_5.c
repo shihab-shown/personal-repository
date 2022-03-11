@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 int main()
 {
   int num1,num2,num3;
@@ -19,7 +18,6 @@ int main()
     {
       printf("Second largest is %d",num3);
     }
-    
   }
   else if(num2>=num1 && num2>=num3)
   {
@@ -40,5 +38,5 @@ int main()
   {
     printf("Second largest is %d",num2);
   }
-   return 0;
+  return 0;
 }

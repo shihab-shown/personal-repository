@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 int main()
 {
   int a,b,second,minitue,hour;
@@ -9,8 +8,6 @@ int main()
   b=a%3600;
   minitue=b/60;
   second=b%60;
-  printf("%d hours ",hour);
-  printf("%d minitues ",minitue);
-  printf("%d seconds.",second);
+  printf("%d hours %d minitues %d seconds.",hour,minitue,second);
   return 0;
 }
