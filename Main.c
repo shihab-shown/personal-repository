@@ -1,13 +1,6 @@
 #include <stdio.h>
-
 int main()
 {
-    int a, b;
-
-    printf("Enter the value of a\n");
-    scanf("%d", &a);
-    printf("Enter the value of b\n");
-    scanf("%d", &b);
-    printf("\aSum of a+b is %d", a + b);
-    getch();
+    printf("Hello World");
+    return 0;
 }
