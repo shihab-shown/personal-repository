@@ -5,14 +5,14 @@
 
   int main()
 {
-  int i,j,rownum1,rownum2,colnum1,colnum2,a[10][10],b[10][10],c[10][10],k,sum=0;
+  int i,j,rownum1,rownum2,colnum1,colnum2,k,sum=0;
   
   printf("Enter the number of Row and Column of first Matrix: ");
   scanf("%d %d",&rownum1,&colnum1);
 
   printf("Enter the number of Row and Column of second Matrix: ");
   scanf("%d %d",&rownum2,&colnum2);
-
+  int a[rownum1][colnum1], b[rownum2][colnum2],c[rownum1][colnum2];
   if(colnum1 != rownum2)
   {
     printf("ERROR! \a");
