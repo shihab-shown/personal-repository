@@ -3,7 +3,7 @@
 #include <string.h>
 #include <windows.h>
 
-struct contact 
+struct contact
 {
   char name[30], email[30], phoneNo[20];
 }list;
@@ -19,6 +19,8 @@ void delete_contact();
 void ext();
 void menu();
 void option();
+void edit_contact2(char query[30]);
+void delete_contact2(char query[30]);
 
 // **** Main Function
 int main()
@@ -48,7 +50,7 @@ void ext()
   case 1:
     exit(1);
     break;
-  
+
   default:
     printf("INVALID CHOICE");
     break;
@@ -101,7 +103,7 @@ void choice(int a)
   case 6:
     ext();
     break;
-  
+
   default:
     printf("INVALID CHOICE");
     break;
@@ -178,9 +180,11 @@ void search()
   fgets(query,30,stdin);
   query[strlen(query)-1]='\0';
   printf("Searching ");       // Dot motion
-  for(int i=0; i<=3; i++)
+   int i,b;
+  for( i=0; i<=3; i++)
+
   {
-    Sleep(600);
+    Sleep(300);
     printf(".");
   }
   system("cls");
@@ -190,6 +194,30 @@ void search()
     {
       printf("***Match Found***\n\n");
       printf("Name: %s\nEmail address: %s\nPhone No: %s\n",list.name,list.email,list.phoneNo);
+      printf("\n1. Edit Contact\t\t2. Delete Contact\t\t3. Menu\t\t4. Exit\n");
+      printf("enter your choice: ");
+      scanf("%d",&b);
+      switch(b)
+      {
+      case 1:
+        fclose(fptr);
+        edit_contact2(query);
+        break;
+      case 2: 
+        fclose(fptr);
+        delete_contact2(query);
+        break;
+      case 3:
+        system("cls");
+        menu();
+        break;
+      case 4:
+        ext();
+      default:
+        printf("Invalid Input");
+        break;
+
+      }
       ctr++;
     }
   }
@@ -197,9 +225,78 @@ void search()
   {
     printf("***No Match Found***");
   }
-  fclose(fptr);
   option();
 }
+void edit_contact2(char query[30])
+{
+  FILE *fptr, *ftmp;
+  int ctr=0;
+  fptr=fopen("Contact.txt","r+");
+  ftmp=fopen("temp.txt","a");
+  printf("\tEdit Contact\n");
+  printf("=================================\n\n");
+  while (fscanf(fptr,"%s %s %s",list.name,list.email,list.phoneNo)!=EOF)
+  {
+    if(stricmp(query,list.name)==0)
+    {
+      printf("Name: ");
+      scanf(" ");
+      fgets(list.name,30,stdin);
+      list.name[strlen(list.name)-1]='\0';
+      printf("Email Address: ");
+      fgets(list.email,30,stdin);
+      list.email[strlen(list.email)-1]='\0';
+      printf("Phone No: ");
+      fgets(list.phoneNo,20,stdin);
+      list.phoneNo[strlen(list.phoneNo)-1]='\0';
+      fprintf(ftmp,"%s %s %s\n",list.name,list.email,list.phoneNo);
+      ctr++;
+    }
+    else
+    {
+      fprintf(ftmp,"%s %s %s\n",list.name,list.email,list.phoneNo);
+    }
+  }
+
+
+    printf("\n\nContact edited successfully");
+
+  fclose(fptr);
+  fclose(ftmp);
+  remove("Contact.txt");
+  rename("temp.txt","Contact.txt");
+}
+
+void delete_contact2(char query[30])
+{
+  FILE *fptr, *ftmp;
+  int ctr=0;
+  fptr=fopen("Contact.txt","r+");
+  ftmp=fopen("temp.txt","a");
+  printf("\n");
+
+
+  while (fscanf(fptr,"%s %s %s",list.name,list.email,list.phoneNo)!=EOF)
+  {
+    if(stricmp(query,list.name)==0)
+    {
+      ctr++;
+      continue;
+    }
+    else
+    {
+      fprintf(ftmp,"%s %s %s\n",list.name,list.email,list.phoneNo);
+    }
+  }
+
+    printf("\n\nContact deleted successfully");
+
+  fclose(fptr);
+  fclose(ftmp);
+  remove("Contact.txt");
+  rename("temp.txt","Contact.txt");
+}
+
 
 void edit_contact()
 {
@@ -228,7 +325,7 @@ void edit_contact()
       printf("Phone No: ");
       fgets(list.phoneNo,20,stdin);
       list.phoneNo[strlen(list.phoneNo)-1]='\0';
-      fprintf(ftmp,"%s %s %s\n",list.name,list.email,list.phoneNo); 
+      fprintf(ftmp,"%s %s %s\n",list.name,list.email,list.phoneNo);
       ctr++;
     }
     else
