@@ -1,6 +1,7 @@
 *.exe
 *.save
 *.o
+*.class
 Rough.c
 Rough.py
 .vscode/settings.json

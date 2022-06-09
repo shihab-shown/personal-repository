@@ -17,9 +17,14 @@ int main()
     }
   }
   int secondmax=a[0];
-  for(int i=1; i<n-1; i++)
+  for(int i=1; i<n; i++)
   {
-    if(a[i]>secondmax && a[i]!=max)
+    if(secondmax==max)
+    {
+      secondmax=a[i];
+      continue;
+    }
+    else if(a[i]>secondmax && a[i]<max)
     {
       secondmax=a[i];
     }
