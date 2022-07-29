@@ -1,9 +1,5 @@
-import java.io.InputStream;
 import java.util.Scanner;
 
-/**
- * FirstProgram
- */
 public class FirstProgram {
 
   public static void main(String[] args) {
@@ -17,5 +13,6 @@ public class FirstProgram {
     System.out.println(name);
     System.out.println("Age "+age);
     System.out.println("Food "+food);
+    input.close();
   }
 }
