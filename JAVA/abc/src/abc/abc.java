@@ -20,7 +20,7 @@ public class abc {
 			N = factorial(arr[i]);
 			System.out.println(N);
 		}
-
+		in.close();
 	}
 
 	static int factorial(int a) {
