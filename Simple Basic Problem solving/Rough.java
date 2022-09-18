@@ -7,5 +7,6 @@ public class Rough {
     str[0][0] = in.nextLine();
     str[0][1] = in.nextLine();
     System.out.println(str[0][1]);
+    in.close();
   }
 }

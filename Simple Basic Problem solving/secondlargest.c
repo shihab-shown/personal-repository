@@ -1,17 +1,16 @@
 #include <stdio.h>
 int main()
 {
-  int n;
-  scanf("%d",&n);
-  int secondmax[n];
-  for(int p=0; p<n; p++)
+  int T;
+  scanf("%d",&T);
+  int secondmax[T];
+  for(int p=0; p<T; p++)
   {
     int a[3];
     for(int i=0; i<3; i++)
     {
       scanf("%d",&a[i]);
     }
-    
     int max=a[0];
     for(int i=1; i<3; i++)
     {
@@ -34,8 +33,7 @@ int main()
       }
     }
   }
-  
-  for(int i=0; i<n; i++)
+  for(int i=0; i<T; i++)
   {
     printf("%d\n",secondmax[i]);
   }
