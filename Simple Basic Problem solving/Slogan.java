@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class Slogan {
   public static void main(String[] args) {
     String[][] str1 = new String[100][100];
