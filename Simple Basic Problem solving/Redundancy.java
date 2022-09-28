@@ -7,7 +7,7 @@ public class Redundancy {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     String s;
     int count;
-    while ((s = br.readLine()) != null) {
+    while ((s = br.readLine()) != "\r") {
       String[] line = s.split(" ");
       int[] a = new int[line.length];
       for (int i = 0; i < line.length; i++) {
