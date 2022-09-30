@@ -11,6 +11,18 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch Main",
+      "request": "launch",
+      "mainClass": "FirstProject.src.Main"
+    },
+    {
+      "type": "java",
+      "name": "Launch App",
+      "request": "launch",
+      "mainClass": "FirstProject.src.App"
+    },
+    {
+      "type": "java",
       "name": "Launch hello",
       "request": "launch",
       "mainClass": "hello",

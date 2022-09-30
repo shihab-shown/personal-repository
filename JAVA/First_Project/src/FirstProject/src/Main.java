@@ -5,7 +5,7 @@ import java.awt.Color;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-public class App {
+public class Main {
     public static void main(String[] args){
         JFrame frame = new JFrame();
         frame.setVisible(true);
@@ -13,9 +13,9 @@ public class App {
         frame.setSize(500,400);
         frame.setTitle("Hello");
         frame.setResizable(true);
-        frame.getContentPane().setBackground(new Color(230,123,155));
+        frame.getContentPane().setBackground(new Color(131, 252, 2, 255));
         JLabel label = new JLabel();
-        label.setText("hello");
+        label.setText("hello world");
         frame.add(label);
     }
 }
