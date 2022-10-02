@@ -1,9 +1,9 @@
 // This is an object
 
 public class Cars {
-  String name = "Audi";
+  static String name;
   int price = 10000;
-  int speed = 150;
+  static int speed;
   public int milage(){
     return price/speed;
   }
