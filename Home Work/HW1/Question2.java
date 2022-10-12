@@ -8,7 +8,7 @@ public class Question2{
       sum += number%10;
       number /= 10;
     }
-    System.out.println(sum);
+    System.out.println("Sum = "+sum);
     in.close();
   }
 }
