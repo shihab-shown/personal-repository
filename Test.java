@@ -1,12 +1,6 @@
 public class Test{
   public static void main(String[] args) {
-    int balance = 10;
-    while (true) {
-      if (balance < 9){
-        continue;
-      }  
-      balance = balance - 9;  
+    char rand = (char)('!'+ Math.random()*('/'-'!'+1));
+      System.out.println(rand);
     }
-    System.out.println("Balance is " + balance);
   }
-}
