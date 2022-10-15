@@ -1,6 +1,5 @@
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.event.*;
 
 public class Gui extends JFrame {
     private JPanel mainPanel;
@@ -17,38 +16,9 @@ public class Gui extends JFrame {
         generateButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                StringBuilder str = new StringBuilder();
-                for (int i = 0; i<12; i++) {
-                    int rand = (int)(1+Math.random()*(4-1+1));
-                    switch (rand) {
-                        case 1 -> {
-                            char lowCharacter = (char) ('a' + Math.random() * ('z' - 'a' + 1));
-                            str.append(lowCharacter);
-                        }
-                        case 2 -> {
-                            int number = (int) (Math.random() * 10);
-                            str.append(number);
-                        }
-                        case 3 -> {
-                            char specialCharacter = (char) ('!' + Math.random() * ('/' - '!' + 1));
-                            str.append(specialCharacter);
-                        }
-                        case 4 -> {
-                            char upCharacter = (char) ('A' + Math.random() * ('Z' - 'A' + 1));
-                            str.append(upCharacter);
-                        }
-                    }
-                }
-                textField1.setText(str.toString());
+
+                textField1.setText(Generate.passGen());
             }
         });
-    }
-
-    public static void main(String[] args) {
-        Gui frame = new Gui();
-        //frame.generateButton.s
-        //frame.textField1.setText(s);
-        String s = "Hello";
-
     }
 }
