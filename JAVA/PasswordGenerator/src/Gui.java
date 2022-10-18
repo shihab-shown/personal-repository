@@ -10,7 +10,6 @@ public class Gui extends JFrame {
     private JButton generateButton;
     private JButton copyButton;
 
-
     public Gui(){
         setContentPane(mainPanel);
         setTitle("Welcome");
@@ -20,7 +19,6 @@ public class Gui extends JFrame {
         generateButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
                 textField1.setText("");
                 textField1.setText(Generate.passGen());
             }

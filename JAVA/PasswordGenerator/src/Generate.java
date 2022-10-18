@@ -1,7 +1,5 @@
 public class Generate {
-
     public static final StringBuilder str = new StringBuilder();
-
     public static String passGen() {
         str.setLength(0);
         for (int i = 0; i < 12; i++) {
