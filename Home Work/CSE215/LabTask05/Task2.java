@@ -4,7 +4,7 @@ public class Task2 {
         System.out.println("Enter the side of the Pentagon: ");
         Scanner in = new Scanner(System.in);
         double side = in.nextDouble();
-        System.out.println(areaOfPentagon(side));
+        System.out.println("Area is: "+areaOfPentagon(side));
         in.close();
     }
     public static double areaOfPentagon(double side){
