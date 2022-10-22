@@ -2,6 +2,7 @@ import java.util.Scanner;
 public class Task2 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
+        System.out.println("Enter n:");
         int n = in.nextInt();
         int[] arr = new int[n];
         System.out.println("Insert the elements of the array: ");
@@ -11,7 +12,7 @@ public class Task2 {
         System.out.println("Enter the search key: ");
         int key = in.nextInt();
         int index = findElement(arr, key);
-        System.out.println(index);
+        System.out.println(key+" found in index "+index);
         in.close();
     }
 
