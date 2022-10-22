@@ -17,7 +17,7 @@ public class Task1 {
         double avg = sum*1.0/ n;
         for (int i = 0; i < n; i++) {
             if (arr[i] > avg) {
-                System.out.println(arr[i]+" ");
+                System.out.print(arr[i]+" ");
                 count++;
             }
         }
