@@ -15,7 +15,6 @@ public class Task4 {
         }
         int index=sumOfRow(arr);
         System.out.println(index);
-        
         in.close();
     }
 public static int sumOfRow(int[][] arr) {
