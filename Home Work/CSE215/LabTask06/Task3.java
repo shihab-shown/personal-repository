@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class Task3 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
+        System.out.println("Enter n:");
         int n = in.nextInt();
         int[] arr = new int[n];
         System.out.println("Insert the elements of the array: ");
@@ -12,6 +13,7 @@ public class Task3 {
         int min = findMinElement(arr);
         int max = findMaxElement(arr);
         System.out.println("Smallest element is: " + min + " Largest element is: " + max);
+        in.close();
     }
 
     public static int findMinElement(int[] arr) {
