@@ -18,7 +18,7 @@ public class Task4 {
         
         in.close();
     }
-    private static int sumOfCol(int[][] arr) {
+public static int sumOfRow(int[][] arr) {
         int[] sum = new int[arr.length];
         for (int i=0; i<arr.length; i++){
             sum[i]=0;
