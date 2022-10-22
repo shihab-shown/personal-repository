@@ -21,7 +21,7 @@ public class Task1 {
                 count++;
             }
         }
-        System.out.println((count*100.0)/n+"%");
+        System.out.println("\n"+(count*100.0)/n+"%");
         in.close();
     }
 }
