@@ -14,6 +14,7 @@ public class Task5 {
             }
         }
         sumOfCol(arr);
+        in.close();
     }
     public static void sumOfCol(int[][] arr) {
         int[] sum = new int[arr.length];
