@@ -12,6 +12,7 @@ public class Main {
   static String[] studentName = new String[5];
   static String[] teacherTime = new String[6];
   static String[] teacherID = new String[6];
+  static Map<Integer, String> selectedStudent = new HashMap<Integer, String>();
 
   public static void main(String[] args) {
     // There will be 4 courses and each of them will have 5 sections
@@ -81,6 +82,9 @@ public class Main {
     teacherID[5] = "TAA";
 
     menuPrint();
+    for (int i = 0; i < 5; i++) {
+      System.out.println(studentID[i]+" "+studentName[i]);
+    }
     System.out.println("Thanks for using me. Have a nice day.");
     in.close();
   }
@@ -128,7 +132,7 @@ public class Main {
   }
 
   private static void teacher() {
-    int input, b=0;
+    int input, b = 0;
     System.out.println("Enter your Teacher ID");
     in.nextLine();
     String a = in.nextLine();
@@ -136,10 +140,16 @@ public class Main {
       if (teacherID[i].equals(a)) {
         System.out.println(teacherTime[i]);
         b++;
-        break;
+        System.out.println("Your Students:");
+        for (Integer key : selectedStudent.keySet()) {
+          if (selectedStudent.get(key).equals(teacherID[i])) {
+            System.out.println("Student Name: " + studentName[key] + "  ID: " + studentID[key]);
+          }
+          break;
+        }
       }
     }
-    if(b==0)
+    if (b == 0)
       System.out.println("Incorrect Teacher ID!!!");
     System.out.println("Do you want to continue? (1:YES | 0:NO)");
     input = in.nextInt();
@@ -162,6 +172,7 @@ public class Main {
     int section = in.nextInt();
     selectedSection[index][section - 1] = true;
     selectedSectionNo[index][course - 1] = section - 1;
+    selectedStudent.putIfAbsent(index, courseTeacher[course - 1][section - 1]);
     System.out.println("Do you want to add another course? (1:YES | 0:NO)");
     int a = in.nextInt();
     if (a == 1) {
@@ -175,6 +186,7 @@ public class Main {
     System.out.println("Which course you want to remove?");
     int course = in.nextInt();
     selectedCourse[index][course - 1] = false;
+    selectedStudent.remove(course-1);
     System.out.println("Do you want to remove another course? (1:YES | 0:NO)");
     int a = in.nextInt();
     if (a == 1) {
