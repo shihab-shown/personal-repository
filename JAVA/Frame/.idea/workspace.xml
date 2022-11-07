@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="126802b4-a7b3-4b68-b55f-8b7e4975e745" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../PasswordGenerator/PasswordGenerator.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../PasswordGenerator/src/Gui.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../PasswordGenerator/src/Gui.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Home Work/CSE215/Assignment1/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Home Work/CSE215/Assignment1/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Gui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Gui.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +37,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "/mnt/AEBC39BFBC39833F/PasswordGen",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",

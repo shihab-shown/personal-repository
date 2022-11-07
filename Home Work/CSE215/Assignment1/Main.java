@@ -1,5 +1,4 @@
 import java.util.*;
-
 public class Main {
   static Scanner in = new Scanner(System.in);
   static boolean[][] selectedCourse = new boolean[5][3];
