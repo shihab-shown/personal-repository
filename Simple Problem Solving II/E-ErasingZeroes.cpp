@@ -4,7 +4,6 @@ int main()
 {
   int t, size, count , x, y;
   string s;
-  cout << "Enter t: " << endl;
   cin >> t;
   while (t--)
   {
