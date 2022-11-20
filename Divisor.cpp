@@ -16,7 +16,7 @@ int main()
       }
     }
   }
-  sort(a.begin(), a.end());
+  //sort(a.begin(), a.end());
   for(auto i : a)
     cout<<i<<" ";
   
