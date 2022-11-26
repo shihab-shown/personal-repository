@@ -4,11 +4,42 @@
     {
       "type": "lldb",
       "request": "launch",
-      "name": "Debug in terminal",
-      "program": "${workspaceFolder}/${fileBasenameNoExtension}",
+      "name": "Launch",
+      "program": "${workspaceFolder}/<program>",
       "args": [],
       "cwd": "${workspaceFolder}"
     },
+    {
+      "name": "(gdb) Pipe Launch",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "enter program name, for example ${workspaceFolder}/a.exe",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${fileDirname}",
+      "environment": [],
+      "externalConsole": false,
+      "pipeTransport": {
+        "debuggerPath": "/usr/bin/gdb",
+        "pipeProgram": "<full path to pipe program such as plink.exe>",
+        "pipeArgs": [],
+        "pipeCwd": ""
+      },
+      "MIMode": "gdb",
+      "setupCommands": [
+          {
+              "description": "Enable pretty-printing for gdb",
+              "text": "-enable-pretty-printing",
+              "ignoreFailures": true
+          },
+          {
+              "description":  "Set Disassembly Flavor to Intel",
+              "text": "-gdb-set disassembly-flavor intel",
+              "ignoreFailures": true
+          }
+      ]
+    },
+    
     {
       "name": "g++.exe build and debug active file",
       "type": "cppdbg",

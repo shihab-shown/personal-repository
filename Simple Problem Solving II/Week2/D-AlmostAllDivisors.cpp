@@ -1,20 +1,19 @@
 #include <bits/stdc++.h>
 using namespace std;
 typedef long long ll;
-vector<ll>b;
+set<ll>b;
 void devisor(ll n){
-  for (int i = 1; i*i <= n; i++)
+  for (ll i = 2; i*i <= n; i++)
   {
     if (n%i == 0)
     {
-      b.push_back(i);
+      b.insert(i);
       if (n/i!= i)
       {
-        b.push_back(n/i);
+        b.insert(n/i);
       }
     }
   }
-  sort(b.begin(), b.end());
 }
 int main()
 {
@@ -32,18 +31,20 @@ int main()
     
     sort(a.begin(), a.end());
     result = (a[0]*a[n-1]);
+    b.clear();
     devisor(result);
-    if (b.size() == (n+2)) 
+    p = true;
+    if (b.size() == n) 
     {
-      p = true;
       for (int i = 0; i < n; i++)
       {
-        if (a.at(i) != b.at(i+1))
-        {
-          p = false;
-          break;
-        }
+        if (b.find(a[i]) != b.end())
+          continue;
+        p = false;
+        break;
       }
+    }
+    else p = false;  
       if (p)
       {
         cout<<result<<endl;
@@ -51,11 +52,6 @@ int main()
       {
         cout<< -1 <<endl;
       }
-    } else
-    {
-      cout<< -1<<endl;
-    }
-    b.clear();
     a.clear();
   }
   return 0;
