@@ -2,7 +2,7 @@
 using namespace std;
 typedef long long ll;
 vector<string>s;
-map<string, string> f;
+map<string, int> f;
 int main()
 {
   int t;
@@ -13,18 +13,13 @@ int main()
     cin>>n;
     if (f.count(n) == 0)
     {
-      s.push_back(n);
+      cout<<"NO"<<"\n";
       f[n] = 1;
     }
     else
     {
-      f[n];
+      cout<<"YES"<<"\n";
     }
   }
-  for (int i = 0; i < s.size(); i++)
-  {
-    cout<<s[i]<<" "<<f[s[i]]<<"\n";
-  }
-  
   return 0;
 }
