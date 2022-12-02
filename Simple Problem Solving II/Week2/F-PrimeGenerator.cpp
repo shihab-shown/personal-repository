@@ -2,7 +2,7 @@
 using namespace std;
 typedef long long int ll;
 vector<int>primes;
-void seive(ll b){
+void sieve(ll b){
     bool isPrime[31700];
     isPrime[0] = isPrime[1] = false;
     for (int i = 2; i * i <= b; i++)
