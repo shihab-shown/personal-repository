@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.appc.Scene2Controller">
+   <children>
+      <Label fx:id="l1" alignment="CENTER" layoutX="14.0" layoutY="208.0" prefHeight="80.0" prefWidth="575.0" text="Mr. " textFill="#0a42ff">
+         <font>
+            <Font name="System Bold Italic" size="48.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="91.0" layoutY="16.0" prefHeight="111.0" prefWidth="420.0" text="Hello">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

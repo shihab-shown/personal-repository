@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="f21c9b92-52c5-4efb-a396-30147c42e5b9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="1cbc69b6-8b6f-485e-98e3-baaa29afb9e8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../../HW1/Question1.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../HW1/Question2.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../HW1/Question3.java" beforeDir="false" />
@@ -17,43 +13,28 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-        <option value="Interface" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
-  <component name="ProjectId" id="2IgRU0osH0xhJ9Dq1F1PbsMCTSK" />
+  <component name="ProjectId" id="2Ilrbs2KkHBqiRSCaBOIX6qx9A5" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="f21c9b92-52c5-4efb-a396-30147c42e5b9" name="Changes" comment="" />
-      <created>1670601251699</created>
+      <changelist id="1cbc69b6-8b6f-485e-98e3-baaa29afb9e8" name="Changes" comment="" />
+      <created>1670767086096</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1670601251699</updated>
+      <updated>1670767086096</updated>
     </task>
     <servers />
   </component>
