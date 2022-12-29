@@ -54,8 +54,4 @@ public class LoginPage{
         }
         randomAccessFile.close();
     }
-
-//    public void indexPage(){
-//
-//    }
 }

@@ -9,6 +9,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.DatePicker;
 import javafx.stage.Stage;
+import javafx.util.converter.LocalDateStringConverter;
+import javafx.util.converter.LocalDateTimeStringConverter;
 
 import java.io.IOException;
 import java.net.URL;
@@ -35,14 +37,41 @@ public class IndexPage implements Initializable {
 
 
     public void getIndexPage(ActionEvent e){
-        //System.out.println("Hello Motherfuckers!!!!!!!!!");
-        System.out.println(from.getValue());
-        System.out.println(to.getValue());
-        LocalDate localDate = date.getValue();
-        System.out.println(localDate);
     }
-    public void setDate(ActionEvent event){
-        LocalDate localDate = date.getValue();
-        System.out.println(localDate);
+
+    public String getFrom() {
+        return from.getValue();
     }
+    public String getTo() {
+        return to.getValue();
+    }
+    public static LocalDate localDate;
+    public void setDate(){
+           localDate = date.getValue();
+        // System.out.println(localDate);
+    }
+    public String getLocalDate(){
+        LocalDateStringConverter localDateStringConverter = new LocalDateStringConverter();
+        return localDateStringConverter.toString(localDate);
+    }
+
+    public void searchBus(ActionEvent e) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("BusList.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+            Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+            stage.setScene(scene);
+            stage.setTitle("Available Buses");
+            stage.show();
+
+            // pass the selected values to the BusList controller
+            BusList busList = fxmlLoader.getController();
+            busList.checkRoute(this.getFrom(), this.getTo(),this.getLocalDate());
+
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+    }
+
+
 }
