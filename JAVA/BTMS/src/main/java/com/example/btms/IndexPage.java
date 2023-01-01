@@ -10,9 +10,7 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.DatePicker;
 import javafx.stage.Stage;
 import javafx.util.converter.LocalDateStringConverter;
-import javafx.util.converter.LocalDateTimeStringConverter;
 
-import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
 import java.util.ResourceBundle;
@@ -48,7 +46,6 @@ public class IndexPage implements Initializable {
     public static LocalDate localDate;
     public void setDate(){
            localDate = date.getValue();
-        // System.out.println(localDate);
     }
     public String getLocalDate(){
         LocalDateStringConverter localDateStringConverter = new LocalDateStringConverter();
@@ -64,7 +61,6 @@ public class IndexPage implements Initializable {
             stage.setTitle("Available Buses");
             stage.show();
 
-            // pass the selected values to the BusList controller
             BusList busList = fxmlLoader.getController();
             busList.checkRoute(this.getFrom(), this.getTo(),this.getLocalDate());
 

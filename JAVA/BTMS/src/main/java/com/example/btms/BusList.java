@@ -35,7 +35,6 @@ public class BusList{
     String location,destination,timing, dt;
     @FXML
     public void checkRoute(String from , String to, String date){
-       System.out.println("checkRoute invoked");
        Integer i = 1;
        int ct=0;
        while (i<7) {
@@ -45,7 +44,6 @@ public class BusList{
            timing = locations[2];
            dt = date;
            if (from.equals(location) && to.equals(destination)) {
-               System.out.println("Hello!!!!!!!!");
                this.f.setText(location);
                this.t.setText(destination);
                this.time.setText(timing);
@@ -69,16 +67,17 @@ public class BusList{
    public void ConfirmBooking() throws IOException {
        FileWriter fileWriter = new FileWriter("Purchase History.txt",true);
        BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
-       bufferedWriter.write(location+" ");
-       bufferedWriter.write(destination+" ");
-       bufferedWriter.write(dt+" ");
-       bufferedWriter.write(timing+" ");
+       bufferedWriter.write("From: "+location+"\n");
+       bufferedWriter.write("To: "+destination+"\n");
+       bufferedWriter.write("Date: "+dt+"\n");
+       bufferedWriter.write("Time: "+timing+"\n\n");
+
        bufferedWriter.close();
 
        Alert alert = new Alert(Alert.AlertType.INFORMATION);
        alert.setTitle("Confirmed");
-       alert.setHeaderText("");
-       alert.setContentText("TRY AGAIN");
+       alert.setHeaderText("Your ticket has been confirmed.");
+       alert.setContentText("Have a good journey!");
        alert.showAndWait();
    }
 }

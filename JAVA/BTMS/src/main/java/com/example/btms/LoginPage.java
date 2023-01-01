@@ -9,6 +9,9 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 
@@ -24,19 +27,21 @@ public class LoginPage{
         String line;
         int ct = 0;
         while((line = randomAccessFile.readLine())!=null) {
-//            username = line;
-//            password = randomAccessFile.readLine();
-            username = "";
-            password = "";
-            if (username.equals(usr.getText()) && password.equals(pass.getText())) {
-                System.out.println("Hello World");
+            username = line;
+            password = randomAccessFile.readLine();
 
+            if (username.equals(usr.getText()) && password.equals(pass.getText())) {
                 FXMLLoader fxmlLoader = new FXMLLoader(this.getClass().getResource("IndexPage.fxml"));
                 Scene scene = new Scene(fxmlLoader.load());
                 Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
                 stage.setScene(scene);
                 stage.setTitle("Index Page");
                 stage.show();
+
+                FileWriter fileWriter = new FileWriter("Purchase History.txt",true);
+                BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+                bufferedWriter.write("Passenger Name: "+username+"\n");
+                bufferedWriter.close();
 
                 IndexPage indexPage= fxmlLoader.getController();
                 indexPage.getIndexPage(e);
@@ -51,6 +56,8 @@ public class LoginPage{
             alert.setHeaderText("You've entered wrong Password");
             alert.setContentText("TRY AGAIN");
             alert.showAndWait();
+            usr.setText("");
+            pass.setText("");
         }
         randomAccessFile.close();
     }
