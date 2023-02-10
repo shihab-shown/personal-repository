@@ -1,6 +1,0 @@
-Passenger Name: Shown
-From: Dhaka
-To: Dinajpur
-Date: 1/3/2023
-Time: 10:15
-

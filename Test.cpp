@@ -1,13 +1,39 @@
-#include <bits/stdc++.h>
+#include <iostream>
+
 using namespace std;
 
 int main()
 {
-  vector<int>v;  
-  v.push_back(3);
-  v.push_back(4);
-  v.push_back(5);
-  v.push_back(6);
-  cout<<*prev(v.end())<<"\n";
-  return 0;
+    cout<<"Enter rows: ";
+    int rows;
+    cin>>rows;
+    int** arr;
+    arr = new int*[rows];
+    int* col=NULL;
+    col = new int[rows];
+    for(int i=0;i<rows;i++)
+    {
+        cout<<"Enter size of row no."<<(i+1)<<" :";
+        cin>>col[i];
+    }
+    for(int i=0;i<rows;i++)
+    {
+        arr[i] = new int[col[i]];
+    }
+    for(int i=0;i<rows;i++)
+    {
+        for(int j=0;j<col[i];j++)
+        {
+            cin>>arr[i][j];
+        }
+    }
+    for(int i=0;i<rows;i++)
+    {
+        for(int j=0;j<col[i];j++)
+        {
+            cout<<arr[i][j];
+        }
+        cout<<"\n";
+    }
+
 }
