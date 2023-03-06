@@ -1,43 +1,31 @@
-#include "dynArr.h"
-#include <iostream>
+#include <bits/stdc++.h>
+#include "dynarr.h"
 using namespace std;
 
-dynArr::dynArr()
+template <class T>
+dynArr<T>::dynArr(int i, int j)
 {
-  data = NULL;
-  size = 0;
-}
-// dynArr::dynArr(int s)
-// {
-//   data = new int[s];
-//   size = s;
-// }
-
-dynArr::dynArr(int row, int col)
-{
-  data = new int *[row];
-  for (int i = 0; i < row; i++)
-  {
-    data[i] = new int[col];
-  }
-  size = row;
+    data = new T*[i];
+    for (int k = 0; k < i; k++)
+        data[k] = new T[j];
+    row = i;
+    col = j;
 }
 
-dynArr::~dynArr()
+template <class T>
+dynArr<T>::~dynArr()
 {
-  delete [] data;
+    for (int i = 0; i < row; i++)
+        delete [] data[i];
+    delete [] data;
 }
-int dynArr::getValue(int rowIndex, int colIndex)
+template <class T>
+void dynArr<T>::setValue(int i,int j, T value)
 {
-  return data[rowIndex][colIndex];
+    data[i][j] = value;
 }
-void dynArr::setValue(int rowIndex, int colIndex, int value)
+template <class T>
+T dynArr<T>::getValue(int i,int j)
 {
-  data[rowIndex][colIndex] = value;
+    return data[i][j];
 }
-// void dynArr::allocate(int s)
-// {
-//   delete [] data;
-//   data = new int[s];
-//   size = s;
-// }

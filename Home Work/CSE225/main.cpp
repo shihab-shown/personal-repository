@@ -1,43 +1,32 @@
 #include <bits/stdc++.h>
-#include "dynArr.cpp"
+#include "dynarr.h"
+#include "dynarr.cpp"
+
 using namespace std;
 
 int main()
 {
-  dynArr a();
-  // dynArr b(5);
-  // cout<<"Enter five values: \n";
-  // for(int i=0; i<5; i++)
-  // {
-  //   int x;
-  //   cin>>x;
-  //   b.setValue(i, x);
-  // }
-  // for(int i=0; i<5; i++)
-  // {
-  //   cout<<b.getValue(i)<<" ";
-  // }
-  int row,col;
-  cout<<"Enter row and column number: \n";
-  cin>>row>>col;
-  dynArr c(row, col);
-  cout<<"Enter "<<row*col<<" values: \n";
-  for(int i=0; i<row; i++)
+  cout<<"Enter row and column: \n";
+  int r, c;
+  cin>>r>>c;
+  dynArr<char> a(r, c);
+  char x;
+  for (int i = 0; i < r; i++)
   {
-    for(int j=0; j<col; j++)
+    for (int j = 0; j < c; j++)
     {
-      int x;
       cin>>x;
-      c.setValue(i, j, x);
+      a.setValue(i, j, x);
     }
   }
-  for(int i=0; i<row; i++)
+  for (int i = 0; i < r; i++)
   {
-    for(int j=0; j<col; j++)
+    for (int j = 0; j < c; j++)
     {
-      cout<<c.getValue(i, j)<<" ";
+      cout<<a.getValue(i, j)<<" ";
     }
-    cout<<"\n";
+    cout<<endl;
   }
+  
   return 0;
 }

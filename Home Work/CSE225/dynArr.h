@@ -1,18 +1,14 @@
-#ifndef DYNARR_H_INCLUDED
-#define DYNARR_H_INCLUDED
+#ifndef INCLUDED_DYNARR
+#define INCLUDED_DYNARR
+template <class T>
 class dynArr
-{
-private:
-  int **data;
-  int size;
-
+{ 
 public:
-  dynArr();
-  //dynArr(int);
-  dynArr(int, int);
-  ~dynArr();
-  void setValue(int, int, int);
-  int getValue(int, int);
-  //void allocate(int);
+    T **data;
+    int row, col;
+    dynArr(int, int);
+    ~dynArr();
+    void setValue(int,int, T);
+    T getValue(int,int);
 };
-#endif // DYNARR_H_INCLUDED
+#endif // INCLUDED_DYNARR
