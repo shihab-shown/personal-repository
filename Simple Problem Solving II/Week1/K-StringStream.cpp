@@ -7,7 +7,7 @@ int main()
   string a;
   cin>>a;
   stringstream s(a);
-  vector<int>Integers = parseInts(s);
+  vector<int>Integers;
     
   return 0;
 }

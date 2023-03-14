@@ -1,39 +1,27 @@
-#include <iostream>
-
+// reverse a queue
+#include <bits/stdc++.h>
 using namespace std;
+#define ll long long int
+#define fast ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
 
 int main()
 {
-    cout<<"Enter rows: ";
-    int rows;
-    cin>>rows;
-    int** arr;
-    arr = new int*[rows];
-    int* col=NULL;
-    col = new int[rows];
-    for(int i=0;i<rows;i++)
-    {
-        cout<<"Enter size of row no."<<(i+1)<<" :";
-        cin>>col[i];
-    }
-    for(int i=0;i<rows;i++)
-    {
-        arr[i] = new int[col[i]];
-    }
-    for(int i=0;i<rows;i++)
-    {
-        for(int j=0;j<col[i];j++)
-        {
-            cin>>arr[i][j];
-        }
-    }
-    for(int i=0;i<rows;i++)
-    {
-        for(int j=0;j<col[i];j++)
-        {
-            cout<<arr[i][j];
-        }
-        cout<<"\n";
-    }
-
+  fast
+  deque<int> q;
+  q.push_back(1);
+  q.push_back(2);
+  q.push_back(3);
+  q.push_back(4);
+  q.push_back(5);
+  // print the queue
+  for(auto i:q)
+    cout<<i<<" ";
+  cout<<endl;
+  // reverse the queue
+  reverse(q.begin(),q.end());
+  // print the queue
+  for(auto i:q)
+    cout<<i<<" ";
+  cout<<endl;
+  return 0;
 }
