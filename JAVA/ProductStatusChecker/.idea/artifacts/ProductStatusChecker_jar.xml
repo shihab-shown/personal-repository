@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="ProductStatusChecker:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/ProductStatusChecker_jar</output-path>
+    <root id="archive" name="ProductStatusChecker.jar">
+      <element id="module-output" name="ProductStatusChecker" />
+      <element id="extracted-dir" path="$USER_HOME$/Downloads/jsoup-1.8.1.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

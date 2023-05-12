@@ -20,7 +20,6 @@ public:
   void DeleteItem(ItemType);
   void ResetList();
   void GetNextItem(ItemType &);
-
 private:
   NodeType *listData;
   int length;
