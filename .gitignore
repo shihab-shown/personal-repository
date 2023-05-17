@@ -4,6 +4,8 @@
 *.class
 Rough.c
 Rough.py
+Test.cpp
+Test.java
 .vscode/settings.json
 Simple Basic Problem solving/.vscode/launch.json
 .cph
