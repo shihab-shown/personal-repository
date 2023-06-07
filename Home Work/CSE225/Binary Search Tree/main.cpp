@@ -1,36 +1,22 @@
 #include <bits/stdc++.h>
 #include "binarysearchtree.h"
 #include "binarysearchtree.cpp"
-// #include "quetype.cpp"
-// #include "quetype.h"
+void insertMid(TreeType<int> &bst, int start, int end, int arr[])
+{
+  if (start > end)
+    return;
+  int mid = (start + end) / 2;
+  bst.InsertItem(arr[mid]);
+  insertMid(bst, start, mid - 1, arr);
+  insertMid(bst, mid + 1, end, arr);
+}
 
 using namespace std;
-#define ll long long int
-#define fast ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
-
-template <class ItemType>
-void DetermineOrder(TreeType<ItemType>& bst, vector<ItemType>& sequence, int start, int end) {
-    if (start > end) {
-        return;
-    }
-
-    // Find the middle element
-    int mid = (start + end) / 2;
-    ItemType rootValue = sequence[mid];
-
-    // Insert the middle element as the root of the tree
-    bst.InsertItem(rootValue);
-
-    // Recursively build the left and right subtrees
-    DetermineOrder(bst, sequence, start, mid - 1);
-    DetermineOrder(bst, sequence, mid + 1, end);
-}
 int main()
 {
-  fast
-  TreeType<int> tree;
 
   // Part 1
+  // TreeType<int>tree;
 
   // if (tree.IsEmpty())
   //   cout << "Tree is empty" << endl;
@@ -56,7 +42,7 @@ int main()
   //   cout << "Item is found" << endl;
   // else
   //   cout << "Item is not found" << endl;
- 
+
   // cin >> x;
   // found = false;
   // tree.RetrieveItem(x, found);
@@ -82,28 +68,31 @@ int main()
   // cout << endl;
 
   // Part 2
-TreeType<int> bst;
-
-    // Input sequence of integers
-    vector<int> sequence = {11, 9, 4, 2, 7, 3, 17, 0, 5, 1};
-
-    // Sort the sequence in ascending order
-    sort(sequence.begin(), sequence.end());
-
-    // Determine the best ordering for the minimum height BST
-    DetermineOrder(bst, sequence, 0, sequence.size() - 1);
-
-    // Print the best ordering for the minimum height BST
-    cout << "Best ordering for minimum height BST: ";
-    // bst.ResetTree(IN_ORDER);
-    // bool finished = false;
-    // while (!finished) {
-    //     int item;
-    //     bst.GetNextItem(item, IN_ORDER, finished);
-    //     cout << item << " ";
-    // }
-    bst.Print();
-    cout << endl;
- 
+  TreeType<int> bst;
+  int item;
+  bool found = false;
+  for (int i = 0; i < 10; i++)
+  {
+    cin >> item;
+    bst.InsertItem(item);
+  }
+  
+  int n = bst.LengthIs();
+  cout << "Number of nodes: " << n << endl;
+  int arr[n];
+  bst.ResetTree(IN_ORDER);
+  for (int i = 0; i < n; i++)
+  {
+    bst.GetNextItem(item, IN_ORDER, found);
+    arr[i] = item;
+  }
+  TreeType<int> bst2;
+  insertMid(bst2, 0, n - 1, arr);
+  bst2.ResetTree(PRE_ORDER);
+  for (int i = 0; i < n; i++)
+  {
+    bst2.GetNextItem(item, PRE_ORDER, found);
+    cout << item << " ";
+  }
   return 0;
 }

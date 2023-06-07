@@ -103,8 +103,7 @@ void TreeType<ItemType>::InsertItem(ItemType item)
   Insert(root, item);
 }
 template <class ItemType>
-void Delete(TreeNode<ItemType> *&tree,
-            ItemType item)
+void Delete(TreeNode<ItemType> *&tree, ItemType item)
 {
   if (item < tree->info)
     Delete(tree->left, item);
