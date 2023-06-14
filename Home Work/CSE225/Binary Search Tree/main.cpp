@@ -16,56 +16,56 @@ int main()
 {
 
   // Part 1
-  // TreeType<int>tree;
+  TreeType<int>tree;
 
-  // if (tree.IsEmpty())
-  //   cout << "Tree is empty" << endl;
-  // else
-  //   cout << "Tree is not empty" << endl;
+  if (tree.IsEmpty())
+    cout << "Tree is empty" << endl;
+  else
+    cout << "Tree is not empty" << endl;
 
-  // for (int i = 0; i < 10; i++)
-  // {
-  //   int x;
-  //   cin >> x;
-  //   tree.InsertItem(x);
-  // }
-  // if (tree.IsEmpty())
-  //   cout << "Tree is empty" << endl;
-  // else
-  //   cout << "Tree is not empty" << endl;
-  // cout << "Number of nodes: " << tree.LengthIs() << endl;
-  // int x;
-  // bool found = false;
-  // cin >> x;
-  // tree.RetrieveItem(x, found);
-  // if (found)
-  //   cout << "Item is found" << endl;
-  // else
-  //   cout << "Item is not found" << endl;
+  for (int i = 0; i < 10; i++)
+  {
+    int x;
+    cin >> x;
+    tree.InsertItem(x);
+  }
+  if (tree.IsEmpty())
+    cout << "Tree is empty" << endl;
+  else
+    cout << "Tree is not empty" << endl;
+  cout << "Number of nodes: " << tree.LengthIs() << endl;
+  int x;
+  bool found = false;
+  cin >> x;
+  tree.RetrieveItem(x, found);
+  if (found)
+    cout << "Item is found" << endl;
+  else
+    cout << "Item is not found" << endl;
 
-  // cin >> x;
-  // found = false;
-  // tree.RetrieveItem(x, found);
-  // if (found)
-  //   cout << "Item is found" << endl;
-  // else
-  //   cout << "Item is not found" << endl;
-  // tree.Print();
-  // cout << endl;
-  // tree.ResetTree(PRE_ORDER);
-  // for (int i = 0; i < tree.LengthIs(); i++)
-  // {
-  //   tree.GetNextItem(x, PRE_ORDER, found);
-  //   cout << x << " ";
-  // }
-  // cout << endl;
-  // tree.ResetTree(POST_ORDER);
-  // for (int i = 0; i < tree.LengthIs(); i++)
-  // {
-  //   tree.GetNextItem(x, POST_ORDER, found);
-  //   cout << x << " ";
-  // }
-  // cout << endl;
+  cin >> x;
+  found = false;
+  tree.RetrieveItem(x, found);
+  if (found)
+    cout << "Item is found" << endl;
+  else
+    cout << "Item is not found" << endl;
+  tree.Print();
+  cout << endl;
+  tree.ResetTree(PRE_ORDER);
+  for (int i = 0; i < tree.LengthIs(); i++)
+  {
+    tree.GetNextItem(x, PRE_ORDER, found);
+    cout << x << " ";
+  }
+  cout << endl;
+  tree.ResetTree(POST_ORDER);
+  for (int i = 0; i < tree.LengthIs(); i++)
+  {
+    tree.GetNextItem(x, POST_ORDER, found);
+    cout << x << " ";
+  }
+  cout << endl;
 
   // Part 2
   TreeType<int> bst;
