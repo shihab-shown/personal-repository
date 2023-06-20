@@ -8,4 +8,5 @@ Test.cpp
 Test.java
 .vscode/settings.json
 Simple Basic Problem solving/.vscode/launch.json
-.cph
+*.cph
+/node_modules
