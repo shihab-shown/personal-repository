@@ -39,4 +39,18 @@ Return
     send, n
     return
   }
+Return
 
+#IfWinActive ahk_exe code.exe
+  ^`::Send, ^!n
+#IfWinActive
+Return
+
+#IfWinActive ahk_exe idea64.exe
+  ^`::Send, ^{F5}
+  ^Esc::
+    {
+      Send, +{Esc}
+      Send, +{F5}
+    }
+Return
