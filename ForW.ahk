@@ -7,12 +7,12 @@ Return
 Return
 
 #y::
-  Run, https://www.youtube.com/
+  Run, https://www.youtube.com/feed/subscriptions
 Return
 
 CapsLock & w::
   Send, {w down}
-  KeyWait, LButton, D
+  KeyWait, RButton, D
   Send, {w up}
 Return
 
