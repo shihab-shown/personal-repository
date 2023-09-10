@@ -1,75 +1,30 @@
-import './TodoApp.css'
-import { useState } from 'react';
-import { BrowserRouter, Routes, Route, useNavigate, useParams } from 'react-router-dom';
+import "./TodoApp.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import LoginComponent from "./Login";
+import WelcomeComponent from "./Welcome";
 
-export default function TodoApp(){
-  return(
+export default function TodoApp() {
+  return (
     <div className="TodoApp">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<LoginComponent />} ></Route>
-          <Route path="/welcome/:username" element={<WelcomeComponent />} ></Route>
-          <Route path="*" element={<ErrorComponent />} ></Route>
+          <Route path="/" element={<LoginComponent />}></Route>
+          <Route
+            path="/welcome/:username"
+            element={<WelcomeComponent />}
+          ></Route>
+          <Route path="*" element={<ErrorComponent />}></Route>
         </Routes>
       </BrowserRouter>
     </div>
   );
 }
-function LoginComponent(){
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  const [isLoginSuccess, setIsLoginSuccess] = useState();
-  const navigate = useNavigate();
-  function handleUsernameChange(event){
-    console.log(event.target.value);
-    setUsername(event.target.value);
-  }
-  function handlePasswordChange(event){
-    console.log(event.target.value);
-    setPassword(event.target.value);
-  }
-  function handleLogin(){
-    if(username === 'shown' && password === '1234'){
-      console.log('Successful');
-      setIsLoginSuccess(true); 
-      navigate(`/welcome/${username}`);
-    }
-    else{
-      console.log('Failed');
-      setIsLoginSuccess(false);
-    }
-  }
-  return(
-    <div className="Login">
-      <div>
-        <label>Username: </label> <input type="text" name="username" value={username}  onChange={handleUsernameChange}/>
-      </div>
-      <div>
-        <label>Password: </label><input type="password" name="password" value={password} onChange={handlePasswordChange} />
-      </div>
-      <div>
-        <button className="loginButton" onClick={handleLogin}>Login</button>
-      </div>
-      <ShowMessage state={isLoginSuccess} />
+
+function ErrorComponent() {
+  return (
+    <div className="ErrorComponent">
+      <h1>We are working really hard!</h1>
+      <div>Apologies for the 404. Reach out to our team at ABC-DEF-GHIJ.</div>
     </div>
   );
-}
-
-function ShowMessage({state}){
-  if(state){
-    return(
-      <div>Authentication Success</div>
-    );
-  }
-  else if(state === false){
-    return <div>Authentication Failed</div>
-  }
-  return null;
-}
-function WelcomeComponent(){
-  const {username} = useParams();
-  return <div>Welcome {username}</div>
-}
-function ErrorComponent(){
-  return <div>Error</div>
 }
